@@ -1,0 +1,97 @@
+.app {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(15px);
+  padding: 30px;
+  border-radius: 20px;
+  width: 350px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  animation: fadeIn 1s ease-in-out;
+}
+
+h1 {
+  color: white;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+}
+
+/* Fade Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.todo-container input {
+  padding: 10px;
+  width: 65%;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  margin-right: 10px;
+  transition: 0.3s;
+}
+
+.todo-container input:focus {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px #60a5fa;
+}
+
+/* ADD BUTTON */
+.todo-container button {
+  padding: 10px 15px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  background: #2563eb;
+  color: white;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.todo-container button:hover {
+  background: #1d4ed8;
+  transform: scale(1.1);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+}
+
+.todo-container button:active {
+  transform: scale(0.95);
+}
+
+/* LIST STYLE */
+ul {
+  padding: 0;
+  margin-top: 20px;
+}
+
+li {
+  list-style: none;
+  background: rgba(255, 255, 255, 0.15);
+  color: white;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  animation: slideIn 0.4s ease;
+}
+
+/* Slide Animation */
+@keyframes slideIn {
+  from { opacity: 0; transform: translateX(-20px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+/* DELETE BUTTON */
+li button {
+  background: #ef4444;
+  padding: 6px 10px;
+  border-radius: 8px;
+  font-size: 12px;
+}
+
+li button:hover {
+  background: #dc2626;
+  transform: scale(1.1);
+}
